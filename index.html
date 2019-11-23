@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Forms</title>
+	<meta charset="utf-8">
+	<style>
+	form {
+  width: 600px;
+  margin: 50px auto;
+  padding: 15px 20px;
+  background: #f5f5f5;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+}
+input {
+border-radius: 5px;}
+	</style>
+</head>
+<body>
+	<form action="#" method="post" oninput="yearsoutput.value=yearscount.value">
+	<fieldset>
+		<legend>Personal information</legend>
+<label>
+Name
+	<input type="text" autofocus required >
+</label>
+<label>Years
+	1<input type="range" min="1" max="100" step="1" name="yearscount">100
+</label>
+	<output name="yearsoutput"></output>
+<label>Sex
+	<input type="radio" name="sex" value="m"> Man
+	<input type="radio" name="sex" value="w"> Woman
+	<input type="radio" name="sex" value="other"> Other
+</label>
+<label>
+Login
+	<input type="text" autocomplete="off" required>
+</label>
+<label>
+Password
+	<input type="password" autocomplete="off">
+</label>
+<label>
+E-mail
+	<input type="email required>
+</label>
+<label>
+	<input type="date">
+</label>
+<label>
+	<input type="time">
+</label>
+<label for="tel">Номер телефона</label>
+	<input type="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]{3}" id="tel">
+<label>
+Type of coffee
+	<input type="text" list="coffee" name="coffee">
+	<datalist id="coffee">
+		<option value="Latte"></option>
+		<option value="Coffe with milk"></option>
+		<option value="Americano"></option>
+	</datalist>
+</label>
+<label>
+Color
+<input type="color">
+</label>
+<label>
+Topping
+	<select multiple size="3">
+		<option>Caramel</option>
+		<option selected>Cream</option>
+		<option>Chocolate</option>
+	</select>
+</label>
+<label>
+Amount
+	<input type="number" min="5" max="50" step="5">
+</label>
+<label>
+	<input type="search">
+</label>
+</fieldset>
+<label>
+	<input type="checkbox">
+Send news via email
+</label>
+	<input type="submit" value="Submit">
+	<input type="reset" value="Reset">
+</form>
+</body>
+</html>
